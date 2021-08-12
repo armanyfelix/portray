@@ -1,13 +1,16 @@
-// Head
 import Head from 'next/head';
-
-
+import { useSession } from 'next-auth/client';
 
 // Components
 import Navbar from "../components/navbar";
 import SideBar from "../components/sidebar";
+import Login from '../components/login';
 
 export default function Home() {
+  // const [session] = useSession();
+
+  // if (!session) return <Login />
+
   return (
     <>
       <Head>
@@ -17,6 +20,10 @@ export default function Home() {
 
       <Navbar />
       <SideBar />
+
+      <main>
+        hello world
+      </main>
     </>
   )
 }
