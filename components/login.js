@@ -4,7 +4,7 @@ import { signIn } from 'next-auth/client';
 
 function Login() {
     return (
-        <>
+        <div>
             <div className="flex justify-between ">
                 <h1 className=" ml-5 mt-5 text-2xl">PORTRAY</h1>
                 <div className="flex items-start m-4">
@@ -44,7 +44,7 @@ function Login() {
                     objectFit="contain"
                 />
             </div>
-        </>
+        </div>
     )
 }
 

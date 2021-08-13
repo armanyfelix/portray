@@ -1,8 +1,11 @@
 import Button from '@material-tailwind/react/Button'
 import Icon from '@material-tailwind/react/Icon'
+import { useSession } from 'next-auth/client'
 
 
 function Navbar() {
+    const [session] = useSession();
+
     return (
         <nav className="flex  items-center w-full sticky  text-gray-200 bg-gray-600">
             <div className="ml-2">
@@ -38,7 +41,7 @@ function Navbar() {
                 {/* <input className="flex-grow  text-base bg-transparent outline-none" placeholder="/Breadcrumb/" /> */}
             </div>
             <div className="">
-                <img src="/img/profile.jpg" alt="profile"
+                <img src={session.user.image} alt="profile"
                     className="w-10 rounded-full  border-gray-800 hover:border-2" />
             </div>
             <div className="items-center flex ">

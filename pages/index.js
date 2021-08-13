@@ -7,9 +7,9 @@ import SideBar from "../components/sidebar";
 import Login from '../components/login';
 
 export default function Home() {
-  // const [session] = useSession();
+  const [session] = useSession();
 
-  // if (!session) return <Login />
+  if (!session) return <Login />
 
   return (
     <>
@@ -22,7 +22,6 @@ export default function Home() {
       <SideBar />
 
       <main>
-        hello world
       </main>
     </>
   )

@@ -1,16 +1,18 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAphvJCGYtskwrBrf7o-BCqZx7d6EjIZoc",
-    authDomain: "portray-eedc3.firebaseapp.com",
-    projectId: "portray-eedc3",
-    storageBucket: "portray-eedc3.appspot.com",
-    messagingSenderId: "230339165363",
-    appId: "1:230339165363:web:b353dab6582d7e9ebc04c6",
-    measurementId: "G-HC25FFSCZ3"
-  };
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID
+};
 
-const app = !firebase.apps.length 
+
+
+const app = !firebase.apps.length
   ? firebase.initializeApp(firebaseConfig)
   : firebase.app();
 
